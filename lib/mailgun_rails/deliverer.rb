@@ -78,7 +78,7 @@ module MailgunRails
     end
 
     def transform_reply_to(rails_message, mailgun_message)
-      mailgun_message['h:Reply-To'] = rails_message[:reply_to].formatted.first
+      mailgun_message['h:Reply-To'] = rails_message[:reply_to].formatted
     end
 
     # @see http://stackoverflow.com/questions/4868205/rails-mail-getting-the-body-as-plain-text
